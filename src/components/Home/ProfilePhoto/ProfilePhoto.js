@@ -11,7 +11,7 @@ const ProfilePhoto = props => {
   return (
     <Avatar 
       alt='Ryan Flores' 
-      src='/assets/me.jpg' 
+      src='./assets/me.jpg' 
       className={classes.avatar}
     />
   )
