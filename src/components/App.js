@@ -9,7 +9,7 @@ import Contact from './Contact/Contact';
 import ClosingContent from './ClosingContent/ClosingContent';
 import Footer from './Footer/Footer';
 
-// import './App.scss';
+import '../sass/Main.scss';
 
 class App extends React.Component {
   constructor(props) {
@@ -39,7 +39,7 @@ class App extends React.Component {
         <Header />
         { currentComponent }
         {/* <ClosingContent /> */}
-        {/* <Footer /> */}
+        <Footer />
       </React.Fragment>
     )
   }

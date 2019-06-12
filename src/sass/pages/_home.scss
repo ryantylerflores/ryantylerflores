@@ -1,0 +1,76 @@
+.section-intro {
+  margin-top: -6.4rem;
+  position: relative;
+  padding: 15rem 0;
+  background-image: linear-gradient(rgba($color-white, .5), rgba($color-white, .5)), url(/assets/main-background.jpg);
+  height: 96vh;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  background-size: cover;
+  background-position: bottom;
+  z-index: 1;
+}
+
+.section-summary {
+  padding: 10rem 0 30rem;
+  background-color: #00aced;
+  margin-top: -20vh;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+
+}
+
+.section-contact {
+  padding: 10rem 0 0;
+  height: 40rem;
+  // margin-top: -18vh;
+  position: relative;
+  background-color: $color-gray-light-1;
+
+  // &__background {
+  //   height: 50rem;
+  //   width: 100%;
+  //   margin-top: -1rem;
+  //   background-color: #00aced;
+  //   clip-path: polygon(0 0, 100% 0, 100% 58%);
+  //   // position: absolute;
+  //   // top: 0;
+  //   // left: 0;
+  // }
+}
+
+.contact {
+  background-color: $color-white;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .2); 
+  border-radius: 3px;
+  height: 100%;
+
+  &__container {
+    position: absolute;
+    top: -30rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+  }
+
+  &__form {
+    padding: 6rem;
+  }
+
+  &__position {
+    position: absolute;
+    top: -5rem;
+    left: 8rem;
+
+    &-home {
+      height: 62.5rem;
+    }
+  }
+}
+
+.map__container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

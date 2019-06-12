@@ -9,11 +9,13 @@ import styles from './ProfilePhoto.style.js';
 const ProfilePhoto = props => {
   const { classes } = props;
   return (
+    <div className="profile-img__background">
     <Avatar 
       alt='Ryan Flores' 
       src='./assets/me.jpg' 
-      className={classes.avatar}
+      className='profile-img'
     />
+    </div>
   )
 }
 

@@ -3,12 +3,16 @@ const styles = theme => ({
     // background: 'linear-gradient(rgba(0, 172, 237,0.55), rgba(0, 172, 237,0.55)), url(./assets/keyboard_background.jpg) no-repeat center center fixed',
     // backgroundSize: 'cover',
     // background: 'rgba(0, 172, 237,0.45)',
-    background: 'white',
-    height: '92vh',
+    // background: 'white',
+    // height: '100vh',
     // position: 'absolute',
     // top: 0
-    display: 'flex',
-    flexFlow: 'column'
+    // display: 'flex',
+    // flexFlow: 'column'
+    marginTop: '-6.4rem',
+    backgroundImage: 'url(/assets/main-background.jpg)',
+    height: '97vh'
+    
   },
   container: {
     width: '85%',
@@ -24,10 +28,11 @@ const styles = theme => ({
   },
   bodyContainer: {
     // width: '75%',
+    height: '50rem',
     paddingLeft: '15%',
     paddingRight: '15%',
     color: 'white',
-    background: 'rgb(0, 172, 237)',
+    // background: 'rgb(0, 172, 237)',
     // minHeight: '37%'
     flexGrow: 1,
     display: 'flex',
@@ -41,9 +46,6 @@ const styles = theme => ({
   },
   lineHeight: {
     // lineHeight: '40px'
-  },
-  nameTitle: {
-    fontWeight: '500 !important'
   }
 })
 

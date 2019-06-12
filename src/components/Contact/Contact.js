@@ -1,4 +1,5 @@
-import React,{ useState } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
 import {
   TextField,
@@ -9,91 +10,92 @@ import {
   FormControl
 } from '@material-ui/core';
 
+import * as actions from '../../actions/form-actions';
+
 import styles from './Contact.style'
 
 // import UnderConstruction from '../UnderConstruction/UnderConstruction';
 
 const Contact = props => {
-  const { handleSubmit, pristine, reset, submitting, classes } = props;
+    
+    const { handleSubmit, pristine, reset, submitting, classes } = props;
 
- 
+    // const renderError = ({error, touched}) => {
+    //   if (touched && error){
+    //     return (
+    //       <div className="ui error mesasge">
+    //         <div className="header">{error}</div>
+    //       </div>
+    //     );
+    //   }
+    // }
 
-  const renderError = ({error, touched}) => {
-    if (touched && error){
-      return (
-        <div className="ui error mesasge">
-          <div className="header">{error}</div>
-        </div>
-      );
+    const renderTextField = ({input, label, meta: {touched, error} }) => {
+      console.log()
+      return( 
+          <TextField
+            required
+            label={label}
+            className={classes.textField}
+            margin="normal"
+            variant="outlined"
+            {...input}
+          />
+      )
     }
-  }
 
-  
+    const onSubmit = formValues => {
+      props.sendEmail(formValues);
+      // console.log(props);
+    }
 
-  const renderInput = ({input, label, meta }) => {
-    return( 
-      <div>
-        <TextField
-          required
-          // errorText={meta.touched && meta.error}
-          label={label}
-          className={classes.textField}
-          margin="normal"
-          variant="outlined"
-          {...input}
-        />
+    return(
+      <div className="contact">
+        <div className="contact__form">
+          <Typography variant='h2' className="heading-tertiary">
+            Contact Me
+          </Typography>
+          <Typography className="heading-primary--sub">
+            I'll be glad to answer your questions!
+          </Typography>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div>
+              <Field name='fullName' component={renderTextField} label='Your Name (required)' />
+            </div>
+            <div>
+              <Field name='email' component={renderTextField} label='Your Email (required)' />
+            </div>
+            <div>
+              <Field name='subject' component={renderTextField} label='Subject' />
+            </div>
+            <div>
+              <Field name='message' component={renderTextField} label='Your Message' multiLine={true} rows={10} />
+            </div>
+            <div className='u-text-center u-margin-top-big'>
+              <button type='submit' className='btn btn--blue'>Submit</button>
+            </div>
+          </form>
+        </div>
       </div>
     )
   }
 
-  return(
-    <div className={classes.root}>
-      <Typography variant='h2'>
-        Contact Me
-      </Typography>
-      <Typography>
-        I'll be glad to answer your questions!
-      </Typography>
-      <form onSubmit={handleSubmit}>
-        <Field name='name' component={renderInput} label='Your Name (required)' />
-        <Field name='email' component={renderInput} label='Your Email (required)' />
-        <Field name='subject' component={renderInput} label='Subject' />
-        <Field name='message' multiline rows='10' component={renderInput} label='Your Message' />
-        <button type='button' disabled={pristine || submitting} className='btn btn-primary'>Submit</button>
-      </form>
-        {/* </Grid> */}
-        {/* <Grid item xs={6}>
-          <Typography>
-            Ryan Flores
-          </Typography>
-          <Typography>
-            714.595.6250
-          </Typography>
-          <Typography>
-            rtflores90@gmail.com
-          </Typography>
-          <Divider />
-        </Grid>
-      </Grid> */}
-    </div>
-  )
-}
+  // const validate = formValues => {
+  //   const errors = {};
 
-const validate = formValues => {
-  const errors = {};
+  //   if(!formValues.name) {
+  //     errors.name = 'You Must Enter a Name';
+  //   }
 
-  if(!formValues.name) {
-    errors.name = 'You Must Enter a Name';
-  }
+  //   if(!formValues.email) {
+  //     errors.name = 'You Must Enter an Email'
+  //   }
 
-  if(!formValues.email) {
-    errors.name = 'You Must Enter an Email'
-  }
-
-  return errors
-}
+  //   return errors
+  // }
+// }
 
 export default withStyles(styles)(reduxForm({
   form: 'contactForm',
-  validate
-})(Contact));
+  // validate
+})(connect(null,actions)(Contact)));

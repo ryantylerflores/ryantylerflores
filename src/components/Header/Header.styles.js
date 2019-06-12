@@ -3,7 +3,8 @@ const styles = {
     background: 'transparent',
     boxShadow: '0px 0px rgba(0,0,0,0)',
     // color: '#777'
-    color: 'black'
+    color: 'black',
+    marginTop: '3rem'
   },
   headerBottom: {
     background: 'transparent',
@@ -12,7 +13,8 @@ const styles = {
   },
   title: {
     flexGrow: 1,
-    cursor: 'pointer'
+    cursor: 'pointer',
+    paddingRight: '1rem'
   },
   indicatorColor: {
     // color: '#777'

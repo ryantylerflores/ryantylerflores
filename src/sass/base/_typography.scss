@@ -1,0 +1,46 @@
+.heading-primary {
+  text-align: center;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin: 2.4rem 0 !important;
+  color: $color-black;
+
+  // &--animated {
+  //   animation: moveInBottom .5s ease-out .75s;
+  //   animation-fill-mode: backwards;
+  // }
+
+  &--main {
+    display: block;
+    font-weight: 400 !important;
+  }
+
+  &--sub {
+    display: inline-block;
+    font-size: 2rem !important;
+    margin-top: 3rem;
+    transition: all .3s;
+    // background-color: #BCBEBF;
+    // box-shadow: 0 1rem 4rem rgba($color-black, 0.4);
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &-up:hover {
+      transform: rotate(4deg);
+    }
+
+    &-down:hover {
+      transform: rotate(-4deg);
+    }
+  }
+}
+
+.heading-tertiary {
+  font-size: 3.8rem !important;
+}
+
+.paragraph {
+  font-size: 1.8rem !important;
+}

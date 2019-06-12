@@ -38,10 +38,11 @@ const Header = props => {
     <React.Fragment>
       <CssBaseline />
       <HideHeader {...props}>
-        <AppBar className={ classes.headerTop }>
-          <Toolbar>
+        {/* <AppBar className={ classes.headerTop }> */}
+        <AppBar className='header'>
+          <Toolbar className='header__toolbar'>
             <Typography 
-              className={ classes.title } 
+              className='header__title'
               variant='h6'
               // onClick={ () => props.changeAppLocation('Home')}
               onClick={ handleHomeClick }
@@ -61,6 +62,7 @@ const Header = props => {
                   key={ index }
                   label={ navItem } 
                   onClick={ () => props.changeAppLocation(navItem) }
+                  className='header__tab'
                 />
               }) }
             </Tabs>

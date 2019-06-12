@@ -12,12 +12,12 @@ const UnderConstruction = props => {
   const { classes } = props;
 
   return(
-    <div className={classes.root}>
-      <Grid container justify='center' alightItems='center'>
-        <Typography variant='h3' className={`${classes.white} ${classes.paddingTop}`}>
+    <div className="construction">
+      <div className="construction__container">
+        <Typography variant='h2' className={`${classes.white}`}>
           Page is Under Construction!
         </Typography>
-      </Grid>
+      </div>
     </div>
   )
 }
