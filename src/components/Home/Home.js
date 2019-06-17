@@ -22,6 +22,13 @@ const Home = props => {
   return(
     <main>
       <div className="section-intro">
+          {/* <div className="bg-video">
+            <video className="bg-video__content" autoplay="autoplay" muted loop>
+              <source src="/assets/Dancing-Bulbs.mp4" type="video/mp4" />
+              <source src="/assets/Dancing-Bulbs.webm" type="video/webm" />
+              Your browser is not supported!
+            </video>
+          </div>
           <div className="">
             <Grid container justify='center' alignItems='center' gutterBottom>
               <ProfilePhoto />
@@ -34,6 +41,18 @@ const Home = props => {
                 <span className="heading-primary--sub heading-primary--sub-up">Enthusiast</span>
               </Typography>
             </Grid>
+          </div> */}
+          <div className="profile-img__container">
+            <img src="./assets/me.jpg" alt="Profile picture" className="profile-img" />
+          </div>
+          <div className="heading__container">
+            <Typography variant='h1' className="heading-primary">
+              <span className="heading-primary--main">Ryan</span>
+              <span className="heading-primary--main">Flores.</span>
+              <span className="heading-primary--sub heading-primary--sub-up">Designer, </span>
+              <span className="heading-primary--sub heading-primary--sub-down">Developer, </span>
+              <span className="heading-primary--sub heading-primary--sub-up">Enthusiast</span>
+            </Typography>
           </div>
       </div>
       <div className="section-summary">

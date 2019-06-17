@@ -1,6 +1,6 @@
 .heading-primary {
-  text-align: center;
-  text-transform: uppercase;
+  // text-align: center;
+  // text-transform: uppercase;
   backface-visibility: hidden;
   margin: 2.4rem 0 !important;
   color: $color-black;
@@ -12,7 +12,8 @@
 
   &--main {
     display: block;
-    font-weight: 400 !important;
+    font-size: 8rem;
+    font-weight: 600 !important;
   }
 
   &--sub {

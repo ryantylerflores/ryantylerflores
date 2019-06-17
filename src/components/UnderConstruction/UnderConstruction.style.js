@@ -1,7 +1,7 @@
 const styles = theme => ({
   root: {
     height: '100vh',
-    background: 'url(./assets/coming-soon.jpg) no-repeat center center fixed',
+    background: 'url(./assets/blurry-image.jpg) no-repeat center center fixed',
     backgroundSize: 'cover'
   },
   white: {
