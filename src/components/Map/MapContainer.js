@@ -16,25 +16,27 @@ const instagramPath = "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691
 class MapContainer extends React.Component {
   render() {
     return(
-      <React.Fragment>
-        <Map 
-          google={this.props.google}
-          zoom={15}
-          style={mapStyles}
-          fullscreenControl={false}
-          initialCenter={{
-            lat: 33.871506,
-            lng: -117.862776
-          }}
-        />
-        <div className="social__container">
-          <ul className="social__list">
-            <li className="social__item"><a href="https://www.github.com/ryantylerflores" target="_blank" className="social__link"><SVG width={60} fill="#333" path={githubPath} /></a></li>
-            <li className="social__item"><a href="https://www.linkedin.com/in/ryantylerflores" target="_blank" className="social__link"><SVG width={60} fill="#333" path={linkedInPath} /></a></li>
-            <li className="social__item"><a href="https:///www.instagram.com/ryantyler.xo" target="_blank" className="social__link"><SVG width={60} fill="#333" path={instagramPath} /></a></li>
-          </ul>
+      <div className="map">
+        <div className="map__container">
+          <Map 
+            google={this.props.google}
+            zoom={15}
+            style={this.props.mapStyles}
+            fullscreenControl={false}
+            initialCenter={{
+              lat: 33.871506,
+              lng: -117.862776
+            }}
+          />
+          <div className="social__container">
+            <ul className="social__list">
+              <li className="social__item"><a href="https://www.github.com/ryantylerflores" target="_blank" className="social__link"><SVG width={60} fill="#333" path={githubPath} /></a></li>
+              <li className="social__item"><a href="https://www.linkedin.com/in/ryantylerflores" target="_blank" className="social__link"><SVG width={60} fill="#333" path={linkedInPath} /></a></li>
+              <li className="social__item"><a href="https:///www.instagram.com/ryantyler.xo" target="_blank" className="social__link"><SVG width={60} fill="#333" path={instagramPath} /></a></li>
+            </ul>
+          </div>
         </div>
-      </React.Fragment>
+      </div>
     )
   }
 }

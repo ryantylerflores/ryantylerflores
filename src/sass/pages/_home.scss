@@ -59,6 +59,7 @@
   }
 
   &__form {
+    position: relative;
     padding: 6rem;
   }
 
@@ -78,12 +79,17 @@
   }
 }
 
-.map__container {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+.map {
+  position: relative;
+  height: 45rem;
+
+  &__container {
+    height: 100%;
+    width: 100%;
+    // position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .heading__container {

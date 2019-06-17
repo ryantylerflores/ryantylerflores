@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core'
 
 import ProfilePhoto from './ProfilePhoto/ProfilePhoto';
-import Contact from '../Contact/Contact';
+import Form from '../Form/Form';
 import MapContainer from '../Map/MapContainer';
 
 import * as actions from '../../actions/form-actions';
@@ -76,10 +76,17 @@ const Home = props => {
       <div className="section-contact">
         <div className="contact__container">
           <div className="map__container">
-            <MapContainer />
+            <MapContainer 
+              mapStyles={{
+                width: '100%',
+                height: '45rem',
+                borderRadius: '3px',
+                boxShadow: '0 1rem 4rem rgba(0,0,0,.2)'
+              }}
+            />
           </div>
           <div className="contact__position contact__position-home">
-            <Contact 
+            <Form 
             />
           </div>
         </div>
