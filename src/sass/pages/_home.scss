@@ -18,6 +18,11 @@
   margin-top: -20vh;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
 
+  // &__background {
+  //   background-color: #00aced;
+  //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+  // }
+
 }
 
 .section-contact {
@@ -41,7 +46,7 @@
 
 .contact {
   background-color: $color-white;
-  box-shadow: 0 1.5rem 4rem rgba($color-black, .2); 
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .3); 
   border-radius: 3px;
   height: 100%;
 
