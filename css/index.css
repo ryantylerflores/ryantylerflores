@@ -32,3 +32,25 @@ body {
   color: #2f313d;
   /* color: rgba(0,0,0,0.8); 
 } */
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+  body {
+    padding: 0
+  }
+}
+
+
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
