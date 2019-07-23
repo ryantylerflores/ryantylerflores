@@ -5,3 +5,33 @@
 .u-float-right { float: right };
 
 .u-text-center { text-align: center };
+
+.u-padding-big { 
+  padding: 2.4rem;
+  
+  @include respond(phone) {
+    padding: 0
+  }
+}
+
+.u-padding-small {
+  @include respond(phone) {
+    padding: 3rem 0 !important;
+  }
+}
+
+.u-br-mobile {
+  display: none;
+
+  @include respond(phone) {
+    display: static;
+  }
+}
+
+.u-line-center {
+  @include respond(phone) {
+    border-bottom: 1px solid white;
+    height: 1px;
+    width: 100%;
+  }
+}

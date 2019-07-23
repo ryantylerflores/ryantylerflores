@@ -57,14 +57,15 @@ const Home = props => {
       </div>
       <div className="section-summary">
         <div className={classes.bodyContainer}>
-          <Grid container spacing={2} className={classes.padding}>
-            <Grid item xs={12} md={6}>
-              <Typography align='right' variant='h3' className="heading-tertiary">
+          <Grid container spacing={2} className="u-padding-big">
+            <Grid item xs={12} md={6} className="u-padding-small">
+              <Typography align='center' variant='h3' className="heading-tertiary">
                 Hi. I'm Ryan, a software developer from Placentia, California. Feel free to reach out.
               </Typography>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Typography variant='body1' className='paragraph'>
+            <div className="u-line-center" />
+            <Grid item xs={12} md={6} className="u-padding-small">
+              <Typography align='center' variant='body1' className='paragraph'>
                 As a software engineer I pride myself on creating readable, reusable code using the best industry practices. 
                 My passion lies in helping companies create beautiful, user-friendly UIs. My current toolset is coding these UIs
                 in VSCode, ReactJS with Redux, Bootstrap, & Material-UI. Let me know how I can best help you! 

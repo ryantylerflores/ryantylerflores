@@ -5,13 +5,20 @@
   
   height: 97vh;
   
-
+  @include respond(phone) {
+    filter: brightness(.7);
+  }
   
 
   &__container {
     position: absolute;
     top: 0;
     right: 20%;
+    
+    @include respond(phone){
+      position: relative;
+      right: 10%;
+    }
   }
 }
 
