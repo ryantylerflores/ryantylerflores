@@ -56,7 +56,7 @@ const Form = props => {
         <Typography variant='h2' className="heading-tertiary">
           Contact Me
         </Typography>
-        <Typography className="heading-primary--sub">
+        <Typography className="heading-primary--sub u-color-gray-dark-1">
           I'll be glad to answer your questions!
         </Typography>
         <form action="https://formspree.io/rtflores90@gmail.com" method="POST" target="_blank">

@@ -1,10 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import axios from 'axios';
 import { 
   Typography
 } from '@material-ui/core';
-// import UnderConstruction from '../UnderConstruction/UnderConstruction';
 
 import * as actions from '../../actions/project-actions';
 
@@ -35,26 +33,24 @@ class Projects extends React.Component {
   }  
 
   render() {
-    // if(!this.props.projects) {
-    //   return <div>... Loading</div>
-    // } else {
-      return(
-        <div className="projects">
-          <div className="projects__background" />
-          <div className="projects__container">
+    return(
+      <div className="projects">
+        <div className="projects__background" />
+        <div className="projects__container">
+          <div className="projects-heading__container">
             <Typography variant='h1' className="heading-primary u-margin-top-none heading-primary--animated">
-              <span className="heading-primary--main">
+              <span className="heading-primary--main u-color-black">
                 Projects
               </span>
             </Typography>
-            <ul className="projects__list projects__list--animated">
-              { this.renderProject() }
-            </ul>
           </div>
+          <ul className="projects__list projects__list--animated">
+            { this.renderProject() }
+          </ul>
         </div>
-      )
-    }
-  // }
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = state => {

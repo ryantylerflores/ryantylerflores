@@ -1,4 +1,14 @@
-.u-margin-top-big { margin-top: 8rem };
+.u-color-black { color: $color-black !important };
+
+.u-color-gray-dark-1 { color: $color-gray-dark-1 !important }
+
+.u-margin-top-big { 
+  margin-top: 8rem; 
+
+  @include respond(phone){
+    margin-top: 4rem;
+  }
+};
 
 .u-margin-top-none { margin-top: 0 !important };
 
@@ -29,6 +39,12 @@
 }
 
 .u-line-center {
+  border-bottom: 1px solid white;
+  height: 1px;
+  width: 100%;
+}
+
+.u-line-center-mobile {
   @include respond(phone) {
     border-bottom: 1px solid white;
     height: 1px;
