@@ -1,5 +1,5 @@
 import React from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import SVG from '../SVG/SVG';
 
 const mapStyles = {
@@ -27,7 +27,9 @@ class MapContainer extends React.Component {
               lat: 33.871506,
               lng: -117.862776
             }}
-          />
+          >
+            <Marker position={{lat: 33.871, lng: -117.86268}} />
+          </Map>
           <div className="social__container">
             <ul className="social__list">
               <li className="social__item"><a href="https://www.github.com/ryantylerflores" target="_blank" className="social__link"><SVG width={60} fill="#333" path={githubPath} /></a></li>

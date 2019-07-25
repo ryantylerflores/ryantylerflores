@@ -37,13 +37,13 @@ const Home = props => {
       <div className="section-summary">
         <div className={classes.bodyContainer}>
           <Grid container spacing={2} className="u-padding-big">
-            <Grid item xs={12} md={6} className="u-padding-small">
+            <Grid item xs={12} md={6} className="u-padding-small summary">
               <Typography align='center' variant='h3' className="heading-tertiary">
                 Hi. I'm Ryan, a software developer from Placentia, California. Feel free to reach out.
               </Typography>
             </Grid>
             <div className="u-line-center-mobile" />
-            <Grid item xs={12} md={6} className="u-padding-small">
+            <Grid item xs={12} md={6} className="u-padding-small summary">
               <Typography align='center' variant='body1' className='paragraph'>
                 As a software engineer I pride myself on creating readable, reusable code using the best industry practices. 
                 My passion lies in helping companies create beautiful, user-friendly UIs. My current toolset is coding these UIs

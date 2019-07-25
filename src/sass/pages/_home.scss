@@ -19,7 +19,7 @@
 }
 
 .section-summary {
-  padding: 10rem 0 30rem;
+  padding: 13rem 0 36rem;
   background-color: #00aced;
   margin-top: -20vh;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
@@ -29,6 +29,24 @@
     clip-path: none;
   }
 
+}
+
+.summary {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    bottom: -2rem;
+    left: 50%;
+    transform: translate(-50%,0); 
+    border-bottom: 1px solid white;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
 }
 
 .section-contact {

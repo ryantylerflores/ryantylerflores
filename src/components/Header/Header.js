@@ -50,22 +50,23 @@ const Header = props => {
               Ryan Flores
             </Typography>
             
-            <Tabs
+            {/* <Tabs
               value={ value }
               onChange={ handleChange }
               indicatorColor='primary'
               textColor='inherit'
               variant='fullWidth'
-            >
+            > */}
               { ['About','Projects','Contact'].map((navItem,index) => {
-                return <Tab 
+                return <Button 
                   key={ index }
-                  label={ navItem } 
+                  // label={ navItem } 
                   onClick={ () => props.changeAppLocation(navItem) }
                   className='header__tab'
-                />
+                  sizeLarge
+                >{navItem}</Button>
               }) }
-            </Tabs>
+            {/* </Tabs> */}
           </Toolbar>
         </AppBar>
       </HideHeader>
